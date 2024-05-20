@@ -1,0 +1,19 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+prisma-client-rust = { git = "https://github.com/gorilla-devs/prisma-client-rust", rev = "f74daf611f5ce8c20351eb05014b9176df2f0939", features = [
+    "sqlite-create-many",
+    "sqlite",
+    "migrations",
+], default_features = false }
+prisma-client-rust-cli = { git = "https://github.com/gorilla-devs/prisma-client-rust", rev = "f74daf611f5ce8c20351eb05014b9176df2f0939", features = [
+    "sqlite-create-many",
+    "sqlite",
+    "migrations",
+], default_features = false }
+tokio = { version = "1", features = ["full"] }
+serde = "1.0.197"
+serde_json = "1.0.114"
